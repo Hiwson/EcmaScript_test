@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+     box-sizing: border-box;
+    }
+    input{
+      height:50px;
+      font-size:30px;
+      padding: 10px;
+      margin: 30px 40vw;
+      width: 100px;
+      text-align: center;
+    }
+    div{
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+      padding: 10px;
+    }
+    button{
+      padding: 10px;
+      font-size: 35px;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="number"  id="in" readonly value="0">
+  <div>
+  <button id="up" onclick="add()">increase</button>
+  <button id="del" onclick="dis.value = 0">clear</button>
+  <button id="down" onclick="dec()">decrease</button>
+  </div>
+  
+  <script type="text/javascript" charset="utf-8">
+    let dis =document.getElementById('in');
+    let up = document.getElementById('up');
+    let down = document.getElementById('down');
+    
+    let count = 0;
+    function add(){
+     count = count + 1;
+     dis.value = count;
+    }
+    function dec(){
+      count = count - 1;
+      dis.value = count;
+    }
+  </script>
+</body>
+
+</html>

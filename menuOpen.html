@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+     box-sizing: border-box;
+    }
+    div{
+      display: grid;
+      justify-items: center;
+      background: #5860C2;
+      padding: 20px;
+      display: none;
+    }
+    button{
+      padding: 3px;
+      background: #BCC0EE;
+      border-radius: 6px;
+      height: 30px;
+      align-self: center;
+      margin: 10px 30px;
+    }
+    ul{
+      list-style-type: none;
+    }
+  </style>
+</head>
+
+<body>
+    <button id="btn" onclick="display()">open</button>
+  <div id="menu">
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Project</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+  
+  <script type="text/javascript" charset="utf-8">
+    const btn = document.getElementById('btn')
+    const menu = document.getElementById('menu')
+    
+    function display(){
+      if(btn.innerText == 'open'){
+        menu.style.display = 'block';
+        btn.innerText = 'close'
+      }
+      else{
+        btn.innerText = 'open'
+        menu.style.display = 'none'
+      }
+    }
+    
+  </script>
+</body>
+
+</html>

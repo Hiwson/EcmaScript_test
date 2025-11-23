@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    button{
+      margin: auto;
+    }
+    p{
+      padding: 20px;
+      text-align: center;
+    }
+    .dark{
+      background-color: #000;
+      color: #fff;
+    }
+    .light{
+      background-color:#fff;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body id="body">
+  <button id="btn" onclick="">Dark Mode</button>
+  <div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui iusto enim nesciunt, ullam soluta optio unde. Mollitia blanditiis, sit iure, ex nostrum, repudiandae veritatis in nam quae a, labore quisquam.</p>
+    What is you name: <input type="text" id="txt">
+    <br>
+    <br><button id="btn2" onclick="setUser();">Click</button>
+    <p id="demo"></p>
+  </div>
+  
+  <script>
+    const btn = document.getElementById('btn');
+    const body = document.getElementById('body');
+    
+   //window.onload = alert('Hello');
+  let txt = document.getElementById('txt');
+  
+  function setUser() {
+  localStorage.setItem("text",JSON.stringify(txt.value));
+  document.getElementById('demo').innerHTML = "Welcome " + JSON.parse(localStorage.getItem('text'));
+  }
+  
+  document.getElementById('demo').innerHTML = "User name is " + JSON.parse(localStorage.getItem('text'));
+  </script>
+</body>
+
+</html>

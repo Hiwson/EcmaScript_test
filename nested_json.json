@@ -1,0 +1,11 @@
+{
+  "school":{
+    "name":"Gaffee",
+    "category":"extra-county",
+    "leaders":{
+      "principle":"Miss Njwage",
+      "deputy":"Mr Oromo",
+      "senior_tr":"Mr Jenga"
+    }
+  }
+}

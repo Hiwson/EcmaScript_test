@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>learning js dom manipulation</title>
+  <style>
+    #red{
+      width: 200px;
+      background: rgba(219, 106, 106, 1);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="red">
+    <p id="par"></p>
+  </div>
+  
+  <script type="text/javascript" charset="utf-8">
+  
+    let reddiv = document.getElementById('red');
+    reddiv.style.height = 'auto'; 
+    reddiv.style.padding = '10px'; 
+   //document.getElementsByTagName('p').style.fontSize = '28px';
+   document.getElementById('par').innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint eaque voluptatibus iusto a iure necessitatibus molestias accusantium beatae, quos aperiam, magnam neque atque excepturi quam. Nihil, consectetur quia dolore esse!';
+    
+  </script>
+</body>
+
+</html>

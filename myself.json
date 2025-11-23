@@ -1,0 +1,10 @@
+{
+  "name":"uli_thedev",
+  "age":18,
+  "eyeColor":"brown",
+  "height":5.2,
+  "isDev":true,
+  "role":"frontend",
+  "favCar":"ford",
+  "myFavFoods":["Omena","Nyama choma","Githeri","Matoke"]
+}
