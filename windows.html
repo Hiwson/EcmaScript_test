@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+  <p id="time"></p>
+  <br>
+    <!--using js window object to open new page-->
+  <button onclick="window.open('https://w3schools.com')">Want to learn JavaScript?</button><br><br>
+  <button onclick="window.location.assign('https://tutorialspoint.com')">visit tutorials point</button><br><br>
+  <button onclick="window.location.href = 'https://github.com/Hiwson'">See my github Acc</button>
+  
+  <script>
+      //setting timeout syntax: setTimeout(func,millisecs)
+    window.setTimeout( () => alert('Jambo Kenya!'),3000);
+    
+        //stoping execution of a timeout
+    let hello = function hello(){
+      alert('Hello world!'); 
+    }
+    let timeOut = window.setTimeout(hello,5000);
+    window.clearTimeout(timeOut);
+    
+        //setting time interval
+    window.setInterval( 
+      () => {
+        const time = new Date();
+        document.getElementById('time').innerHTML = time.toLocaleTimeString();
+      },1000
+    );
+    
+       //getting window's height and width
+    console.log("Window width is " + window.innerWidth);
+    console.log("Window height is " + window.innerHeight);
+    
+        //getting screen measurements
+    console.log("Screen's height is " + screen.height);
+    console.log("Screen's width is " + screen.width);
+    console.log("Screen's availHeight is " + screen.availHeight);
+    console.log("Screen's availWidth is " + screen.availWidth);
+    console.log("Screen's color depth is " + screen.colorDepth);
+    console.log("Screen's pixel depth is " + screen.pixelDepth);
+    
+        //location object
+    console.log("This page is: " + window.location.href);
+    console.log("Page is hosted by: " + window.location.hostname);
+    console.log("Path of the page is: " + window.location.pathname);
+    console.log("Web protocol used is: " + window.location.protocol);
+    console.log("Port number is: " + window.location.port);
+    
+      //confirm & prompt box
+    window.setTimeout(
+      () => {
+        let confirm = window.confirm("Are you studying programming??");
+        if(confirm == true){
+          let quiz = window.prompt("\t Which language are you focusing on??");
+          console.log(quiz.value);
+        }else{
+          alert("Start learning it...it's awesome");
+        }
+      }, 6000
+    );
+  </script>
+</body>
+
+</html>

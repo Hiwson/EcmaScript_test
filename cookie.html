@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <input type="text" name="myName" id="myName">
+  
+  <script>
+      //creating a cookie
+    document.cookie = "myname = willy; expires = Thu,16 Jan 2026 11:12:13 UTC ";
+    console.log(document.cookie);
+      //changing the value of a cookie
+    document.cookie = "myname = Myles; expires = Thu,16 Jan 2026 11:12:13 UTC ";
+    let x = document.cookie;
+    console.log(x);
+      //deleting a cookie
+    document.cookie = "myname = willy; expires = Thu,16 Jan 2006 11:12:13 UTC ";
+    console.log(document.cookie);
+  </script>
+</body>
+
+</html>
